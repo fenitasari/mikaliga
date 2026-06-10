@@ -5,66 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MIKALIGA Nursery</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:"Times New Roman", serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#f8fff8;
+background:#f4fff4;
 color:#222;
-}
-
-header{
-background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('hero.jpg');
-background-size:cover;
-background-position:center;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero{
-max-width:900px;
-}
-
-.hero h1{
-font-size:4rem;
-font-weight:800;
-letter-spacing:2px;
-}
-
-.hero p{
-font-size:1.2rem;
-margin-top:15px;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#2e7d32;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-background:#1b5e20;
-transform:translateY(-3px);
 }
 
 nav{
@@ -72,73 +28,102 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:rgba(27,94,32,.95);
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
+background:#1b5e20;
+padding:15px;
+text-align:center;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
 nav h2{
 color:white;
+font-size:32px;
 }
 
-nav ul{
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('hero.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
-gap:25px;
-list-style:none;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-nav a{
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero h1{
+font-size:72px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+line-height:1.8;
+}
+
+.slogan{
+font-size:26px;
+font-style:italic;
+margin:25px 0;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#4caf50;
 color:white;
 text-decoration:none;
-font-weight:500;
+border-radius:50px;
+font-size:20px;
+font-weight:bold;
+transition:0.3s;
 }
 
-section{
+.btn:hover{
+background:#2e7d32;
+}
+
+.section{
 padding:80px 10%;
 }
 
-.section-title{
+.section h2{
 text-align:center;
-margin-bottom:50px;
-}
-
-.section-title h2{
-font-size:2.5rem;
+font-size:42px;
 color:#1b5e20;
+margin-bottom:40px;
 }
 
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+max-width:1000px;
+margin:auto;
+text-align:center;
+font-size:22px;
+line-height:2;
 }
 
-.about img{
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.about-text p{
-line-height:1.9;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:30px;
 }
 
 .card{
+width:380px;
 background:white;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-transition:.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:0.3s;
 }
 
 .card:hover{
@@ -147,7 +132,7 @@ transform:translateY(-10px);
 
 .card img{
 width:100%;
-height:350px;
+height:300px;
 object-fit:cover;
 }
 
@@ -157,7 +142,24 @@ padding:25px;
 
 .card-content h3{
 color:#1b5e20;
-margin-bottom:10px;
+font-size:30px;
+margin-bottom:15px;
+}
+
+.card-content p{
+font-size:18px;
+line-height:1.8;
+}
+
+.price{
+background:#2e7d32;
+color:white;
+padding:12px;
+margin-top:20px;
+border-radius:10px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
 }
 
 .features{
@@ -171,11 +173,11 @@ background:white;
 padding:30px;
 border-radius:15px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .feature h3{
-color:#2e7d32;
+color:#1b5e20;
 margin-bottom:10px;
 }
 
@@ -190,228 +192,239 @@ width:100%;
 height:250px;
 object-fit:cover;
 border-radius:15px;
-transition:.4s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
 }
 
 .contact{
-background:linear-gradient(135deg,#1b5e20,#2e7d32);
+background:#1b5e20;
 color:white;
 text-align:center;
-border-radius:25px;
+padding:80px 20px;
 }
 
 .contact h2{
-font-size:2.3rem;
-margin-bottom:15px;
-}
-
-.contact p{
+font-size:40px;
 margin-bottom:20px;
 }
 
+.contact p{
+font-size:22px;
+margin-bottom:10px;
+}
+
 footer{
-background:#103d13;
+background:#0d3a10;
 color:white;
 text-align:center;
 padding:20px;
 }
 
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
 @media(max-width:768px){
 
 .hero h1{
-font-size:2.5rem;
+font-size:42px;
 }
 
-.about{
-grid-template-columns:1fr;
+.hero p{
+font-size:18px;
 }
 
-nav ul{
-display:none;
+.section h2{
+font-size:32px;
 }
+
+.card{
+width:100%;
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<h2>🌱 MIKALIGA</h2>
-
-<ul>
-<li><a href="#tentang">Tentang</a></li>
-<li><a href="#produk">Produk</a></li>
-<li><a href="#galeri">Galeri</a></li>
-<li><a href="#kontak">Kontak</a></li>
-</ul>
+<h2>🌱 MIKALIGA NURSERY</h2>
 </nav>
 
-<header>
+<section class="hero">
 
-<div class="hero">
+<div class="hero-content">
 
 <h1>MIKALIGA NURSERY</h1>
 
 <p>
-Tumbuh Berkualitas, Berbuah Maksimal.
-Bibit Alpukat Unggulan MIKI & ALIGATOR Siap Tanam.
+Pusat Bibit Alpukat Unggulan MIKI dan ALIGATOR yang siap tanam, sehat, dan berkualitas.
 </p>
 
+<div class="slogan">
+"Tumbuh Berkualitas, Berbuah Maksimal"
+</div>
+
 <a href="https://wa.me/6289524036403" class="btn">
-Pesan Sekarang
+📱 Pesan Sekarang
 </a>
 
 </div>
 
-</header>
+</section>
 
-<section id="tentang">
+<section class="section">
 
-<div class="section-title">
 <h2>Tentang MIKALIGA</h2>
-</div>
 
 <div class="about">
 
-<img src="hero.jpg">
-
-<div class="about-text">
-
 <p>
-MIKALIGA merupakan gabungan dari dua varietas alpukat unggulan yaitu MIKI dan ALIGATOR. Kedua varietas ini dikenal memiliki kualitas buah premium, produktivitas tinggi, dan nilai jual yang menjanjikan.
+Nama <b>MIKALIGA</b> berasal dari gabungan dua varietas alpukat unggulan yaitu <b>MIKI</b> dan <b>ALIGATOR</b>.
 </p>
 
 <br>
 
 <p>
-MIKI terkenal dengan cita rasa lezat, tekstur buah yang lembut, serta kualitas premium. Sedangkan ALIGATOR dikenal menghasilkan buah berukuran besar, produktif, dan memiliki nilai ekonomi tinggi.
+🥑 MIKI terkenal dengan rasa lezat, tekstur buah lembut, dan kualitas premium.
 </p>
 
-</div>
+<p>
+🥑 ALIGATOR dikenal menghasilkan buah berukuran besar, produktif, dan bernilai jual tinggi.
+</p>
 
 </div>
 
 </section>
 
-<section id="produk">
+<section class="section">
 
-<div class="section-title">
 <h2>Produk Unggulan</h2>
-</div>
 
-<div class="products">
-
-<div class="card">
-<img src="miki.jpg">
-
-<div class="card-content">
-<h3>Alpukat MIKI</h3>
-
-<p>
-Varietas unggulan dengan rasa manis, tekstur lembut, dan kualitas buah premium yang sangat diminati pasar.
-</p>
-
-</div>
-</div>
+<div class="cards">
 
 <div class="card">
-<img src="aligator.jpg">
+
+<img src="miki.jpg" alt="Alpukat Miki">
 
 <div class="card-content">
-<h3>Alpukat ALIGATOR</h3>
+
+<h3>🥑 Alpukat MIKI</h3>
 
 <p>
-Dikenal dengan ukuran buah besar, produktivitas tinggi, dan potensi keuntungan yang menjanjikan.
+Bibit alpukat unggulan dengan kualitas premium, rasa lezat, dan pertumbuhan yang baik.
 </p>
 
+<div class="price">
+💰 Rp40.000 - Rp70.000
 </div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="aligator.jpg" alt="Alpukat Aligator">
+
+<div class="card-content">
+
+<h3>🥑 Alpukat ALIGATOR</h3>
+
+<p>
+Bibit alpukat berbuah besar, produktif, dan sangat diminati untuk budidaya maupun koleksi.
+</p>
+
+<div class="price">
+💰 Rp50.000 - Rp100.000
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section class="section">
 
-<div class="section-title">
 <h2>Keunggulan Bibit Kami</h2>
-</div>
 
 <div class="features">
 
 <div class="feature">
-<h3>🌱 Bibit Bermutu</h3>
-<p>Bibit sehat dan siap tanam.</p>
+<h3>🌱 Bibit Berkualitas</h3>
+<p>Dipilih dari indukan unggul dan sehat.</p>
 </div>
 
 <div class="feature">
-<h3>🌿 Perakaran Kuat</h3>
-<p>Pertumbuhan lebih optimal.</p>
+<h3>🌿 Siap Tanam</h3>
+<p>Perakaran kuat dan pertumbuhan optimal.</p>
 </div>
 
 <div class="feature">
-<h3>🛡️ Tahan Penyakit</h3>
-<p>Mudah dirawat dan adaptif.</p>
+<h3>🥑 Varietas Unggulan</h3>
+<p>MIKI dan ALIGATOR yang telah dikenal luas.</p>
 </div>
 
 <div class="feature">
 <h3>🚚 Pengiriman Aman</h3>
-<p>Packing rapi dan cepat.</p>
+<p>Dikemas dengan baik hingga sampai tujuan.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="galeri">
+<section class="section">
 
-<div class="section-title">
-<h2>Galeri Nursery</h2>
-</div>
+<h2>Galeri MIKALIGA</h2>
 
 <div class="gallery">
 
-<img src="hero.jpg">
-<img src="miki.jpg">
-<img src="aligator.jpg">
+<img src="hero.jpg" alt="">
+<img src="miki.jpg" alt="">
+<img src="aligator.jpg" alt="">
 
 </div>
 
 </section>
 
-<section id="kontak">
-
-<div class="contact">
+<section class="contact">
 
 <h2>Hubungi Kami</h2>
 
-<p>
-📍 Taman Cileunyi
-</p>
+<p>📍 Taman Cileunyi</p>
 
-<p>
-📱 +62 895-2403-6403
-</p>
+<p>📱 +62 895-2403-6403</p>
+
+<br>
 
 <a href="https://wa.me/6289524036403" class="btn">
 Chat WhatsApp
 </a>
 
-</div>
-
 </section>
 
 <footer>
 
-<p>
-©️ 2026 MIKALIGA Nursery | Tumbuh Berkualitas, Berbuah Maksimal
-</p>
+©️ 2026 MIKALIGA NURSERY | Bibit Alpukat Unggulan
 
 </footer>
+
+<a class="whatsapp" href="https://wa.me/6289524036403">
+WhatsApp
+</a>
 
 </body>
 </html>
