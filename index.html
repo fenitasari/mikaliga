@@ -1,548 +1,1530 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <title>Mikaliga Nursery</title>
 
+
 <style>
+
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Times New Roman",serif;
+
+font-family:"Arial",sans-serif;
+
 }
+
+
 
 html{
+
 scroll-behavior:smooth;
+
 }
+
+
 
 body{
+
 background:#f5fff4;
+
 color:#333;
+
+font-size:20px;
+
 }
 
+
+
+/* HEADER */
+
+
 header{
+
+
 background:#2e7d32;
-padding:15px 8%;
+
+padding:20px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
+
 position:sticky;
+
 top:0;
+
 z-index:1000;
+
+
 }
+
+
 
 .logo{
+
+
 color:white;
-font-size:28px;
+
+font-size:32px;
+
 font-weight:bold;
+
+
 }
+
+
 
 nav a{
+
+
 color:white;
+
 text-decoration:none;
-margin-left:20px;
+
+margin-left:25px;
+
+font-size:18px;
+
 font-weight:bold;
+
+
 }
+
+
 
 nav a:hover{
+
+
 color:#c8e6c9;
+
 }
+
+
+
+
+
+/* HERO */
+
 
 .hero{
-padding:60px 8%;
+
+
+padding:90px 8%;
+
+
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
-gap:40px;
+
+
+gap:50px;
+
+
 flex-wrap:wrap;
+
+
+
 }
+
+
+
 
 .hero-text{
+
+
 flex:1;
-min-width:300px;
+
+min-width:320px;
+
+
 }
 
-.hero-text h1{
-font-size:55px;
+
+
+.hero-text h4{
+
+
+font-size:25px;
+
 color:#2e7d32;
+
 margin-bottom:20px;
+
+
 }
+
+
+
+.hero-text h1{
+
+
+font-size:70px;
+
+
+line-height:1.15;
+
+
+color:#2e7d32;
+
+
+margin-bottom:25px;
+
+
+}
+
+
 
 .hero-text p{
-font-size:18px;
+
+
+font-size:23px;
+
+
 line-height:1.8;
+
+
 margin-bottom:25px;
+
+
 }
+
+
+
+
+.hero-text ul{
+
+
+font-size:22px;
+
+line-height:2;
+
+list-style:none;
+
+
+margin-bottom:30px;
+
+
+}
+
+
 
 .btn{
+
+
 display:inline-block;
-padding:12px 25px;
+
+
+padding:18px 40px;
+
+
 background:#2e7d32;
+
+
 color:white;
+
+
 text-decoration:none;
-border-radius:30px;
+
+
+border-radius:40px;
+
+
+font-size:20px;
+
+
 font-weight:bold;
+
+
 }
+
+
 
 .btn:hover{
+
+
 background:#1b5e20;
+
+
 }
+
+
+
 
 .hero-image{
+
+
 flex:1;
-min-width:300px;
+
+
 text-align:center;
+
+
 }
+
+
 
 .hero-image img{
+
+
 width:100%;
-max-width:550px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-border:8px solid white;
+
+
+max-width:600px;
+
+
+border-radius:30px;
+
+
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+
+border:10px solid white;
+
+
+
 }
+
+
+
+/* SECTION */
+
 
 .section{
-padding:80px 8%;
+
+
+padding:90px 8%;
+
+
 }
+
+
 
 .section-title{
+
+
 text-align:center;
-font-size:40px;
+
+
+font-size:55px;
+
+
 color:#2e7d32;
-margin-bottom:40px;
+
+
+margin-bottom:50px;
+
+
 }
+
+
+
+
+
+/* ABOUT */
+
 
 .about{
+
+
 background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+
+padding:50px;
+
+
+border-radius:30px;
+
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+
 }
+
+
 
 .about p{
+
+
+font-size:22px;
+
+
 line-height:2;
-font-size:18px;
+
+
 text-align:justify;
-}
 
-.video{
-text-align:center;
-}
-
-.video video{
-width:100%;
-max-width:900px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
-}
-  .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:100%;
-height:280px;
-object-fit:cover;
-}
-
-.card-content{
-padding:25px;
-}
-
-.card-content h3{
-color:#2e7d32;
-font-size:28px;
-margin-bottom:15px;
-}
-
-.card-content p{
-line-height:1.8;
-margin-bottom:15px;
-}
-
-.old-price{
-text-decoration:line-through;
-color:red;
-font-size:20px;
-}
-
-.new-price{
-font-size:28px;
-color:#2e7d32;
-font-weight:bold;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.feature{
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.feature h3{
-color:#2e7d32;
-margin-bottom:15px;
-}
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.testi{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.testi h4{
-color:#2e7d32;
-margin-bottom:10px;
-}
-
-footer{
-background:#2e7d32;
-color:white;
-text-align:center;
-padding:40px 20px;
-margin-top:50px;
-}
-
-@media(max-width:768px){
-
-.hero-text h1{
-font-size:40px;
-}
-
-header{
-flex-direction:column;
-gap:15px;
-}
-
-nav{
-text-align:center;
-}
 
 }
+
+
+
+
 </style>
+
+
 </head>
+
+
 
 <body>
 
+
 <header>
-<div class="logo">🌱 Mikaliga Nursery</div>
+
+
+<div class="logo">
+
+🌱 Mikaliga Nursery
+
+</div>
+
+
 
 <nav>
+
 <a href="#tentang">Tentang</a>
+
 <a href="#produk">Produk</a>
+
 <a href="#keunggulan">Keunggulan</a>
+
 <a href="#testimoni">Testimoni</a>
+
 <a href="#kontak">Kontak</a>
+
 </nav>
+
+
 </header>
+
+
+
+
 
 <section class="hero">
 
+
+
 <div class="hero-text">
-<h1>Bibit Unggul, Panen Maksimal</h1>
+
+
+
+<h4>
+
+🌱 THE NEXT LEVEL OF ALPUKAT UNGGUL
+
+</h4>
+
+
+
+
+<h1>
+
+
+Bukan Sekadar Bibit,
+Ini Awal Kebun Impianmu 🥑
+
+
+</h1>
+
+
+
 
 <p>
-Mikaliga Nursery menyediakan bibit tanaman buah unggul berkualitas,
-sehat, dan siap tanam. Kami berkomitmen menghadirkan bibit terbaik
-untuk membantu pelanggan memperoleh tanaman yang produktif
-dan hasil panen yang optimal.
-</p>
 
-<a href="#produk" class="btn">Lihat Produk</a>
-</div>
 
-<div class="hero-image">
-<img src="hero.jpg" alt="Hero">
-</div>
-
-</section>
-
-<section class="section" id="tentang">
-
-<h2 class="section-title">Tentang Kami</h2>
-
-<div class="about">
-
-<p>
-Selamat datang di Mikaliga Nursery, tempat penyedia bibit tanaman buah unggul yang berkualitas dan terpercaya. Kami berfokus pada penyediaan bibit yang sehat, kuat, dan siap tanam untuk membantu para pecinta tanaman, petani, maupun pelaku usaha pertanian dalam mengembangkan kebun yang produktif.
-</p>
+Bibit alpukat biasa?
 
 <br>
 
-<p>
-Setiap bibit yang kami sediakan dirawat dengan baik sejak proses pembibitan sehingga memiliki pertumbuhan yang optimal. Dengan kualitas bibit yang terjaga, kami berharap dapat membantu pelanggan memperoleh hasil panen yang lebih baik dan menguntungkan.
+
+Saatnya pilih yang lebih unggul!
+
+
 </p>
 
-<br>
+
+
+
 
 <p>
-Mikaliga Nursery berkomitmen untuk memberikan pelayanan terbaik, produk berkualitas, serta pendampingan bagi pelanggan dalam memilih bibit yang sesuai dengan kebutuhan.
+
+
+Hadirkan Alpukat Miki & Alpukat Aligator dari Mikaliga Nursery — bibit pilihan dengan kualitas terbaik, pertumbuhan optimal, dan siap menjadi langkah awal menuju tanaman alpukat yang sehat serta produktif.
+
+
 </p>
 
-</div>
 
-</section>
 
-<section class="section video">
-
-<h2 class="section-title">Video Nursery</h2>
-
-<video controls>
-<source src="video-nursery.mp4" type="video/mp4">
-</video>
-
-</section>
-
-<section class="section" id="produk">
-
-<h2 class="section-title">Produk Kami</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="miki.jpg">
-
-<div class="card-content">
-
-<h3>Alpukat Miki</h3>
 
 <p>
-Bibit Alpukat Miki merupakan salah satu varietas alpukat unggulan yang memiliki rasa gurih, daging buah lembut, serta produktivitas yang tinggi.
+
+
+Dari bibit kecil → tumbuh kuat → menghasilkan buah berkualitas.
+
+
 </p>
 
-<p>
-✔ Daging buah tebal<br>
-✔ Rasa premium<br>
-✔ Cocok untuk pekarangan dan kebun<br>
-✔ Potensi hasil tinggi
-</p>
 
-<div class="old-price">Rp80.000</div>
-<div class="new-price">Rp70.000</div>
 
-</div>
-</div>
-<div class="card">
 
-<img src="aligator.jpg">
 
-<div class="card-content">
+<ul>
 
-<h3>Alpukat Aligator</h3>
 
-<p>
-Alpukat Aligator terkenal dengan ukuran buah yang besar, bentuk unik memanjang, serta daging buah yang tebal dan pulen.
-</p>
+<li>
+✨ Bibit sehat & siap tanam
+</li>
 
-<p>
-✔ Buah besar<br>
-✔ Bentuk unik<br>
-✔ Daging buah tebal<br>
-✔ Nilai jual tinggi
-</p>
 
-<div class="old-price">Rp100.000</div>
-<div class="new-price">Rp80.000</div>
+<li>
+✨ Varietas unggulan bernilai tinggi
+</li>
 
-</div>
-</div>
 
-</div>
+<li>
+✨ Cocok untuk kebun pribadi hingga budidaya
+</li>
 
-</section>
 
-<section class="section" id="keunggulan">
+</ul>
 
-<h2 class="section-title">Mengapa Memilih Kami?</h2>
 
-<div class="features">
 
-<div class="feature">
-<h3>🌱 Bibit Berkualitas</h3>
-<p>Berasal dari indukan unggul dan dipilih secara selektif.</p>
-</div>
 
-<div class="feature">
-<h3>🚚 Pengiriman Aman</h3>
-<p>Dikemas dengan baik agar tetap sehat saat sampai.</p>
-</div>
+<a href="#produk" class="btn">
 
-<div class="feature">
-<h3>💰 Harga Terjangkau</h3>
-<p>Harga kompetitif dengan kualitas terbaik.</p>
-</div>
-
-<div class="feature">
-<h3>🤝 Pelayanan Ramah</h3>
-<p>Siap membantu pelanggan memilih bibit terbaik.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="testimoni">
-
-<h2 class="section-title">Testimoni Pelanggan</h2>
-
-<div class="testimonials">
-
-<div class="testi">
-<h4>⭐⭐⭐⭐⭐ Budi Santoso</h4>
-<p>Bibit Alpukat Miki yang saya beli tumbuh sangat baik dan sehat.</p>
-</div>
-
-<div class="testi">
-<h4>⭐⭐⭐⭐⭐ Siti Nurhaliza</h4>
-<p>Pelayanannya ramah dan bibit sesuai deskripsi.</p>
-</div>
-
-<div class="testi">
-<h4>⭐⭐⭐⭐⭐ Ahmad Fauzi</h4>
-<p>Kualitas bibit sangat memuaskan dan pengiriman aman.</p>
-</div>
-
-<div class="testi">
-<h4>⭐⭐⭐⭐⭐ Rina Oktaviani</h4>
-<p>Harga terjangkau dan bibit datang dalam kondisi segar.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer id="kontak">
-
-<h2>Mikaliga Nursery</h2>
-
-<br>
-
-<p>
-🌱 Menyediakan bibit tanaman buah unggul berkualitas untuk mendukung pertanian yang lebih produktif.
-</p>
-
-<br>
-
-<p>📱 WhatsApp : 089524036403</p>
-<p>📷 Instagram : @mikaliganursery</p>
-<p>✉️ Email : mikaliganursery@gmail.com</p>
-
-<br>
-
-<p>
-©️ 2026 Mikaliga Nursery. All Rights Reserved.
-</p>
-
-<br>
-
-<b>"Bibit Unggul, Panen Maksimal."</b>
-
-</footer>
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Bubble WhatsApp -->
-<a href="https://wa.me/6289524036403?text=Halo%20Mikaliga%20Nursery%20%F0%9F%91%8B%0ASaya%20tertarik%20beli%20bibit%20alpukat%20Miki%20%26%20Aligator%2C%20mau%20order%20ya%20%F0%9F%A5%91%F0%9F%8C%B1"
-class="wa-bubble"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-<span class="wa-text">Chat Kami</span>
+Pesan Bibit Sekarang
 
 </a>
 
+
+
+</div>
+
+
+
+
+
+<div class="hero-image">
+
+
+<img src="hero.jpg" alt="Mikaliga Nursery">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="section" id="tentang">
+
+
+<h2 class="section-title">
+
+
+Tentang Kami
+
+
+</h2>
+
+
+
+<div class="about">
+
+
+
+<p>
+
+
+Mikaliga Nursery hadir untuk menghadirkan bibit alpukat unggulan bagi Anda yang ingin memiliki tanaman sehat, produktif, dan bernilai tinggi.
+
+
+</p>
+
+
+
+<br>
+
+
+
+
+<p>
+
+
+Kami menyediakan Alpukat Miki dan Alpukat Aligator pilihan yang dirawat dengan baik sehingga siap menjadi langkah awal menuju kebun impian Anda.
+
+
+</p>
+
+
+
+<br>
+
+
+
+
+<p>
+
+
+Karena kami percaya, hasil terbaik dimulai dari bibit yang tepat.
+
+
+</p>
+
+
+
+</div>
+
+
+
+</section>
+  <!-- VIDEO -->
+
+<section class="section video">
+
+
+<h2 class="section-title">
+
+Lihat Perjalanan Bibit Kami 🌱
+
+</h2>
+
+
+<video controls style="
+width:100%;
+max-width:900px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+">
+
+
+<source src="video-nursery.mp4" type="video/mp4">
+
+
+</video>
+
+
+</section>
+
+
+
+
+
+
+<!-- PRODUK -->
+
+
+<section class="section" id="produk">
+
+
+<h2 class="section-title">
+
+Pilihan Alpukat Unggulan Kami 🥑
+
+</h2>
+
+
+
+
+<div class="products">
+
+
+
+
+
+<div class="card">
+
+
+<img src="miki.jpg">
+
+
+<div class="card-content">
+
+
+
+<h3>
+
+🥑 Alpukat Miki
+
+</h3>
+
+
+
+<p>
+
+
+Alpukat Miki merupakan varietas unggulan dengan kualitas premium. Memiliki pertumbuhan yang baik, rasa buah yang lezat, serta potensi hasil panen yang optimal.
+
+
+</p>
+
+
+
+<br>
+
+
+
+<p>
+
+
+✨ Daging buah tebal dan lembut
+
+<br>
+
+✨ Rasa premium
+
+<br>
+
+✨ Pertumbuhan optimal
+
+<br>
+
+✨ Cocok untuk kebun pribadi maupun budidaya
+
+
+</p>
+
+
+
+
+<div class="old-price">
+
+Rp80.000
+
+</div>
+
+
+
+<div class="new-price">
+
+Rp70.000
+
+</div>
+
+
+
+<br>
+
+
+<a href="https://wa.me/6289524036403"
+class="btn">
+
+Pesan Sekarang
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<img src="aligator.jpg">
+
+
+<div class="card-content">
+
+
+
+<h3>
+
+🥑 Alpukat Aligator
+
+</h3>
+
+
+
+
+<p>
+
+
+Alpukat Aligator dikenal dengan ukuran buah yang besar, bentuk unik, dan daging buah yang tebal. Pilihan tepat untuk Anda yang ingin memiliki tanaman bernilai jual tinggi.
+
+
+</p>
+
+
+
+<br>
+
+
+
+<p>
+
+
+✨ Buah ukuran besar
+
+<br>
+
+✨ Bentuk unik
+
+<br>
+
+✨ Daging buah tebal
+
+<br>
+
+✨ Cocok untuk peluang usaha
+
+
+</p>
+
+
+
+
+<div class="old-price">
+
+Rp100.000
+
+</div>
+
+
+
+<div class="new-price">
+
+Rp80.000
+
+</div>
+
+
+
+<br>
+
+
+
+<a href="https://wa.me/6289524036403"
+class="btn">
+
+Pesan Sekarang
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
 <style>
-.wa-bubble{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-display:flex;
-align-items:center;
-gap:10px;
-text-decoration:none;
-font-weight:bold;
-font-size:16px;
-box-shadow:0 8px 25px rgba(0,0,0,.25);
-z-index:9999;
-animation:pulse 2s infinite;
+
+
+.products{
+
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+
+}
+
+
+
+.card{
+
+
+background:white;
+
+
+border-radius:25px;
+
+
+overflow:hidden;
+
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+
 transition:.3s;
+
+
 }
 
-.wa-bubble:hover{
-transform:translateY(-3px);
+
+
+
+.card:hover{
+
+
+transform:translateY(-8px);
+
+
 }
 
-.wa-bubble i{
-font-size:32px;
+
+
+
+
+.card img{
+
+
+width:100%;
+
+
+height:330px;
+
+
+object-fit:cover;
+
+
 }
 
-.wa-text{
-white-space:nowrap;
+
+
+
+.card-content{
+
+
+padding:35px;
+
+
 }
 
-@keyframes pulse{
-0%{
-box-shadow:0 0 0 0 rgba(37,211,102,.7);
-}
-70%{
-box-shadow:0 0 0 15px rgba(37,211,102,0);
-}
-100%{
-box-shadow:0 0 0 0 rgba(37,211,102,0);
-}
+
+
+
+
+.card-content h3{
+
+
+font-size:35px;
+
+
+color:#2e7d32;
+
+
+margin-bottom:20px;
+
+
 }
 
-@media(max-width:768px){
-.wa-text{
-display:none;
+
+
+.card-content p{
+
+
+font-size:20px;
+
+
+line-height:1.8;
+
+
 }
 
-.wa-bubble{
-width:65px;
-height:65px;
-padding:0;
-border-radius:50%;
-justify-content:center;
+
+
+
+.old-price{
+
+
+font-size:22px;
+
+color:red;
+
+text-decoration:line-through;
+
+
 }
+
+
+
+.new-price{
+
+
+font-size:38px;
+
+
+font-weight:bold;
+
+
+color:#2e7d32;
+
+
 }
+
+
+
 </style>
 
+
+
+
+
+
+<!-- KEUNGGULAN -->
+
+
+<section class="section" id="keunggulan">
+
+
+<h2 class="section-title">
+
+Kenapa Memilih Mikaliga Nursery?
+
+</h2>
+
+
+
+<div class="features">
+
+
+
+<div class="feature">
+
+
+<h3>
+
+🌱 Bibit Berkualitas
+
+</h3>
+
+
+<p>
+
+
+Bibit dipilih dari indukan unggul untuk menghasilkan tanaman sehat dan produktif.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="feature">
+
+
+<h3>
+
+🌿 Siap Tanam
+
+</h3>
+
+
+<p>
+
+
+Dirawat dengan baik agar bibit memiliki pertumbuhan optimal saat ditanam.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="feature">
+
+
+<h3>
+
+🚚 Pengiriman Aman
+
+</h3>
+
+
+<p>
+
+
+Bibit dikemas secara aman agar tetap segar sampai ke tangan pelanggan.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="feature">
+
+
+<h3>
+
+🤝 Konsultasi Gratis
+
+</h3>
+
+
+<p>
+
+
+Kami siap membantu memilih bibit sesuai kebutuhan Anda.
+
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<style>
+
+
+.features{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+
+gap:30px;
+
+
+}
+
+
+
+.feature{
+
+
+background:white;
+
+
+padding:35px;
+
+
+border-radius:25px;
+
+
+text-align:center;
+
+
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.feature h3{
+
+
+font-size:28px;
+
+
+color:#2e7d32;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.feature p{
+
+
+font-size:19px;
+
+
+line-height:1.8;
+
+
+}
+
+
+
+</style>
+  <section class="section" id="testimoni">
+
+
+<h2 class="section-title">
+
+Apa Kata Pelanggan Kami?
+
+</h2>
+
+
+
+
+<div class="testimonials">
+
+
+
+<div class="testi">
+
+<h4>
+⭐⭐⭐⭐⭐ Abdul Hamim
+</h4>
+
+<p>
+
+Bibit Alpukat Miki yang saya beli tumbuh sehat dan sesuai harapan.
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="testi">
+
+<h4>
+
+⭐⭐⭐⭐⭐ Mimin Kusminah
+
+</h4>
+
+<p>
+
+Pelayanan ramah dan bibit datang dalam kondisi sangat baik.
+
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="testi">
+
+<h4>
+
+⭐⭐⭐⭐⭐ Panitoyahay
+
+</h4>
+
+
+<p>
+
+Kualitas bibit bagus, cocok untuk mulai berkebun.
+
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="section">
+
+
+<div class="about" style="text-align:center;">
+
+
+
+<h2 style="
+font-size:50px;
+color:#2e7d32;
+">
+
+
+Mulai Kebun Impianmu Hari Ini 🥑
+
+
+</h2>
+
+
+
+<br>
+
+
+
+<p style="
+font-size:23px;
+">
+
+
+Karena hasil terbaik dimulai dari bibit yang tepat. Pilih Alpukat Miki dan Alpukat Aligator berkualitas dari Mikaliga Nursery sekarang.
+
+
+</p>
+
+
+
+<br>
+
+
+
+<a href="https://wa.me/6289524036403"
+class="btn">
+
+Pesan Bibit Sekarang
+
+</a>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer id="kontak">
+
+
+<h2>
+
+🌱 Mikaliga Nursery
+
+</h2>
+
+
+
+<br>
+
+
+
+<p>
+
+
+Menyediakan bibit alpukat unggulan berkualitas untuk membantu Anda memiliki tanaman sehat dan produktif.
+
+
+</p>
+
+
+
+<br>
+
+
+<p>
+
+📱 WhatsApp : 089524036403
+
+</p>
+
+
+<p>
+
+📷 Instagram : @mikaliganursery
+
+</p>
+
+
+
+<p>
+
+✉️ Email : mikaliganursery@gmail.com
+
+</p>
+
+
+
+
+<br>
+
+
+
+<p>
+
+© 2026 Mikaliga Nursery. All Rights Reserved.
+
+</p>
+
+
+
+<br>
+
+
+
+<b>
+
+
+"Karena Hasil Terbaik Dimulai Dari Bibit Yang Tepat."
+
+</b>
+
+
+
+</footer>
+
+
+
+
+
+<!-- WHATSAPP -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+<a href="https://wa.me/6289524036403 (mikaliganursery)"
+class="wa-bubble"
+target="_blank">
+
+
+
+<i class="fab fa-whatsapp"></i>
+
+
+<span>
+
+Chat Kami
+
+</span>
+
+
+</a>
+
+
+
+
+<style>
+
+
+.wa-bubble{
+
+
+position:fixed;
+
+
+right:25px;
+
+
+bottom:25px;
+
+
+background:#25D366;
+
+
+color:white;
+
+
+padding:15px 25px;
+
+
+border-radius:50px;
+
+
+font-size:18px;
+
+
+font-weight:bold;
+
+
+text-decoration:none;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+gap:10px;
+
+
+z-index:9999;
+
+
+}
+
+
+
+.wa-bubble i{
+
+
+font-size:35px;
+
+
+}
+
+
+
+</style>
+
+
+
 </body>
+
 </html>
